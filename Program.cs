@@ -143,7 +143,7 @@ void OtherArray2(int[] numbers)
 
 void HW3()
 {
-    Console.WriteLine("Программа создаёт массив длинной от 5 до 10 и заполняет его случайными вещественными числами...");
+    Console.WriteLine("Программа создаёт массив длинной от 5 до 10 и заполняет его случайными двухначными вещественными числами с двумя значениями после запятой...");
     Console.WriteLine("Нажмите ENTER, чтобы получить разницу между Максимальным и Минимальным числами...");
     Console.ReadLine();
     Random random = new Random();
@@ -154,8 +154,6 @@ void HW3()
     FillArray3(numbers);
     PrintArray2(numbers);
     MaxNumber(numbers, maxValue, minValue);
-    // MinNumber(numbers, minValue);
-    // DiffNumber(minValue, maxValue);
 }
 
 void FillArray3(double[] numbers)
@@ -187,22 +185,6 @@ void MaxNumber(double[] numbers, double maxValue, double minValue)
     
 }
 
-// void MinNumber(double[] numbers, double minValue)
-// {
-//     for(int i = 0; i < numbers.Length;i++)
-//     {
-//         if(minValue > numbers[i])
-//         {
-//             minValue = numbers[i];         
-//         }
-//     }
-//     Console.WriteLine(minValue);
-// }
-
-// void DiffNumber(double minValue, double maxValue)
-// {
-//     Console.WriteLine($"Разница между максимальным числом массива {maxValue} и минимальным {minValue} равняется {maxValue - minValue}");
-// }
 void PrintArray2(double[] numbers)
 {
     Console.Write("[ ");
@@ -212,8 +194,6 @@ void PrintArray2(double[] numbers)
     }
     Console.Write("]");
 }
-
-
 
 ////////////////////////////////////////////////////////////////////////////////////
 
