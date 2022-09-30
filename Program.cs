@@ -72,6 +72,8 @@ void OtherArray(int[] numbers)
 
 }
 
+////////////////////////////////////////////////////////////////////////////////////
+
 void HW2()
 {
     Console.WriteLine("Программа создаёт массив длинной от 5 до 10 и заполняет его случайными числами...");
@@ -137,7 +139,85 @@ void OtherArray2(int[] numbers)
 
 }
 
+////////////////////////////////////////////////////////////////////////////////////
 
+void HW3()
+{
+    Console.WriteLine("Программа создаёт массив длинной от 5 до 10 и заполняет его случайными вещественными числами...");
+    Console.WriteLine("Нажмите ENTER, чтобы получить разницу между Максимальным и Минимальным числами...");
+    Console.ReadLine();
+    Random random = new Random();
+    int size = random.Next(5, 11);
+    double[] numbers = new double[size];
+    double maxValue = 0;
+    double minValue = 100;
+    FillArray3(numbers);
+    PrintArray2(numbers);
+    MaxNumber(numbers, maxValue, minValue);
+    // MinNumber(numbers, minValue);
+    // DiffNumber(minValue, maxValue);
+}
+
+void FillArray3(double[] numbers)
+{
+    Random random = new Random();
+    
+    for(int i = 0; i < numbers.Length; i++)
+    {
+        numbers[i] = Math.Round(random.NextDouble() * (100) , 2);
+    }
+}
+
+void MaxNumber(double[] numbers, double maxValue, double minValue)
+{
+    for(int i = 0; i < numbers.Length;i++)
+    {
+        if(maxValue < numbers[i])
+        {
+            maxValue = numbers[i];     
+        }
+
+        if(minValue > numbers[i])
+        {
+            minValue = numbers[i];         
+        }
+    }
+    Console.WriteLine();
+    Console.WriteLine($"Разница между максимальным числом массива {maxValue} и минимальным {minValue} равняется {Math.Round(maxValue - minValue , 2)}");
+    
+}
+
+// void MinNumber(double[] numbers, double minValue)
+// {
+//     for(int i = 0; i < numbers.Length;i++)
+//     {
+//         if(minValue > numbers[i])
+//         {
+//             minValue = numbers[i];         
+//         }
+//     }
+//     Console.WriteLine(minValue);
+// }
+
+// void DiffNumber(double minValue, double maxValue)
+// {
+//     Console.WriteLine($"Разница между максимальным числом массива {maxValue} и минимальным {minValue} равняется {maxValue - minValue}");
+// }
+void PrintArray2(double[] numbers)
+{
+    Console.Write("[ ");
+    for(int i = 0; i < numbers.Length; i++)
+    {
+        Console.Write(numbers[i] + " ");
+    }
+    Console.Write("]");
+}
+
+
+
+////////////////////////////////////////////////////////////////////////////////////
 
 // HW1();
-HW2();
+// HW2();
+HW3();
+
