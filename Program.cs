@@ -112,7 +112,7 @@ void ChangerTask2(int[] numbers, int changer)
 void CheckArray2(int[] numbers)
 {
     int sum = 0;
-    for(int i = 0; i < numbers.Length - 1; i++)
+    for(int i = 0; i < numbers.Length; i++)
     {
         if(i % 2 == 0)
         {
@@ -127,7 +127,7 @@ void CheckArray2(int[] numbers)
 void OtherArray2(int[] numbers)
 {
     int sum = 0;
-    for(int i = 0; i < numbers.Length - 1; i++)
+    for(int i = 0; i < numbers.Length; i++)
     {
         if(i % 2 != 0)
         {
@@ -162,7 +162,7 @@ void FillArray3(double[] numbers)
     
     for(int i = 0; i < numbers.Length; i++)
     {
-        numbers[i] = Math.Round(random.NextDouble() * (100) , 2);
+        numbers[i] = Math.Round(random.NextDouble() * 100 - 50 , 2);
     }
 }
 
